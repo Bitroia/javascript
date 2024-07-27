@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro?</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Veja se você é estrangeiro ou brasileiro</h1>
+    <p>Digite o País que você nasceu</p>
+    <input type="text" name="txt1" id="itxt1">
+    <input type="button" value="Enviar" onclick="enviar()">
+    <div id="res">
+
+    </div>
+    <script>
+
+        function enviar(){
+        var txt1 = window.document.getElementById('itxt1').value.trim();
+        var res = window.document.getElementById('res')
+
+        if(txt1.toLowerCase() === 'brasil'){
+            res.innerHTML = 'Você é Brasileiro!'
+        } else {
+            res.innerHTML = 'Você é estrangeiro!'
+        }
+        }
+        
+    </script>
+    
+</body>
+</html>
