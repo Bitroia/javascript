@@ -4,12 +4,18 @@ var c = 1;
     c++;
 }*/
 
-do {
+/*do {
     console.log (`Passo ${c}`);
     c++;
-} while (c <=5
-);
+} while (c <=5);*/
 
-for(i = 0; i >7; x++){
+/*for( c = 1; c<=7; c++){
+    console.log (`Passo ${c}`);
+}*/
 
+console.log('Vai começar')
+for (c=1;c <=4;c++){
+    console.log(c)
 }
+
+console.log('fim')
