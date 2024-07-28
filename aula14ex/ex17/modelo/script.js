@@ -1,24 +1,23 @@
-function Carregar() {
-    var msg = window.document.getElementById('msg');
-    var img = window.document.getElementById('foto').querySelector('img');
-    var data = new Date();
-    var hora = data.getHours()
-    msg.innerHTML = `Agora são ${hora} horas.`
-    if (hora >= 0 && hora < 13) {
-        //BOM DIA
-        img.scr = 'imagens/manha.wepb'
-        document.body.style.background = '#d4c490'
-    } else if (hora >= 13 && hora <= 18) {
-        //BOA TARDE
-        img.src = 'imagens/tarde.webp'
-        document.body.style.background ='#cd3b02'
+function gerarTabuada(){
+    var numero = document.getElementById('itxtnum')
+    var res = document.getElementById('res')
+    var tabuada = document.getElementById('itabuada')
+
+    if(numero.value.length == 0){
+        window.alert('deu nao')
     } else {
-        //BOA NOITE
-        img.src = 'imagens/noite.webp'
-        document.body.style.background = '#171d30'
+        var n = Number(numero.value)
+        var contador = 1
+        tabuada.innerHTML = ''
+
+        while(contador <=10){
+            var item = document.createElement('option')
+            item.text = `${n}x${contador} = ${n*contador}`
+            item.value = `tabuada${contador}`
+            tabuada.appendChild(item)
+            contador++
+        }
     }
+
+    
 }
-
-
-
-
