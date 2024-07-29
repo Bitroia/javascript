@@ -4,7 +4,7 @@ function gerarTabuada(){
     var tabuada = document.getElementById('itabuada')
 
     if(numero.value.length == 0){
-        window.alert('deu nao')
+        window.alert('Invalido, insira um número')
     } else {
         var n = Number(numero.value)
         var contador = 1
